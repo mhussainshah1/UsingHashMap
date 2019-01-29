@@ -46,5 +46,7 @@ public class Main {
             line = scannerInput.nextLine();
             System.out.println(line);
         }
+        //Finally, your program should prompt the user for the value and print out the text.
+
     }
 }
