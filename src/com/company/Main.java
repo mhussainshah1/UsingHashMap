@@ -14,14 +14,36 @@ public class Main {
         int k;
         String v;
 
+        File file = new File("out\\production\\UsingHashMap\\com\\company\\test.txt");
+
+        if(file.exists()){
+            //Reading
+            Scanner scannerInput = new Scanner(file);
+            String line;
+            while (scannerInput.hasNextLine()) {
+                line = scannerInput.nextLine();
+                System.out.println(line);
+            }
+
+            //file into hashmap
+            scannerInput = new Scanner(file);
+            while (scannerInput.hasNext()) {
+                k = scannerInput.nextInt();
+                v = scannerInput.next();
+                myMap.put(k, v);
+//                System.out.println(k+ " " +v);
+            }
+            scannerInput.close();
+        }
+
         while (true) {
-            System.out.print("Enter a number or -1 to quit: ");
+            System.out.print("Prompt: Enter a number or -1 to quit: ");
             k = keyboard.nextInt();
             if (k == -1) {
                 break;
             } else {
                 if (myMap.containsKey(k)) {
-                    System.out.println("You entered " + myMap.get(k));
+                    System.out.println ("Response: You entered " + myMap.get(k));
                 } else {
                     System.out.print("Not found!!! Enter number in alphabet: ");
                     v = keyboard.next();
@@ -29,9 +51,6 @@ public class Main {
                 }
             }
         }
-
-        File file = new File("out\\production\\UsingHashMap\\com\\company\\test.txt");
-
         //Writing
         Formatter f = new Formatter(file);
         for (Integer key : myMap.keySet()) {
@@ -39,12 +58,6 @@ public class Main {
         }
         f.close();
 
-        //Reading
-        Scanner scannerInput = new Scanner(file);
-        String line;
-        while (scannerInput.hasNextLine()) {
-            line = scannerInput.nextLine();
-            System.out.println(line);
-        }
+
     }
 }
