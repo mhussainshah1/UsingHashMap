@@ -1,4 +1,4 @@
-###Your Assignment:
+### Your Assignment:
 Create a map and store integers and their word values.
 ```
 HashMap<Integer, String> myMap = new HashMap<Integer, String>();
