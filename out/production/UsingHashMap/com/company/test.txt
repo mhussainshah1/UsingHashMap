@@ -1,3 +1,7 @@
 10 ten
 11 eleven
 12 twelve
+<<<<<<< HEAD
+=======
+13 thirteen
+>>>>>>> b105cd6eb0467fd9b705d2ce602c2870dd73515e
