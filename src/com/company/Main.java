@@ -57,18 +57,5 @@ public class Main {
             f.format("%s %s", key, myMap.get(key) + "\r\n");
         }
         f.close();
-<<<<<<< HEAD
-
-        //Reading
-        Scanner scannerInput = new Scanner(file);
-        String line;
-        while (scannerInput.hasNextLine()) {
-            line = scannerInput.nextLine();
-            System.out.println(line);
-        }
-        //Finally, your program should prompt the user for the value and print out the text.
-
-=======
->>>>>>> b105cd6eb0467fd9b705d2ce602c2870dd73515e
     }
 }
